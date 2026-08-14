@@ -1,0 +1,862 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bahasa Indonesia | Ardi Aprianto (Ardi.a)</title>
+    <meta name="description"
+        content="Kumpulan materi Bahasa Indonesia kelas 11 - Teks LHO, Teks Anekdot, Teks Hikayat, Teks Negosiasi, Teks Biografi, & Musikalisasi Puisi.">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,400&display=swap"
+        rel="stylesheet">
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Tailwind Configuration for Old Money Theme -->
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        'om-cream': '#FBF8F1',
+                        'om-cream-dark': '#F2ECC9',
+                        'om-sand': '#E5DDCA',
+                        'om-navy': '#0E1B2E',
+                        'om-navy-light': '#1A2B4C',
+                        'om-navy-dark': '#070E18',
+                        'om-gold': '#C5A059',
+                        'om-gold-light': '#E6C687',
+                        'om-gold-dark': '#9A7733',
+                        'om-emerald': '#1B3B2B',
+                        'om-burgundy': '#4A1521',
+                        'om-charcoal': '#1E242B',
+                        'om-card-light': '#FFFFFF',
+                        'om-card-dark': '#132238'
+                    },
+                    fontFamily: {
+                        serif: ['Playfair Display', 'Cormorant Garamond', 'Georgia', 'serif'],
+                        garamond: ['Cormorant Garamond', 'serif'],
+                        sans: ['Plus Jakarta Sans', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <!-- Script Anti-Flicker untuk Tema Persisten -->
+    <script>
+        if (localStorage.getItem('color-theme') === 'dark' || (!('color-theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            document.documentElement.classList.add('dark');
+        } else {
+            document.documentElement.classList.remove('dark');
+        }
+    </script>
+</head>
+
+<body
+    class="bg-om-cream dark:bg-om-navy-dark text-om-charcoal dark:text-gray-200 font-sans transition-colors duration-300 antialiased min-h-screen flex flex-col justify-between selection:bg-om-gold selection:text-white">
+
+    <!-- TOP ANNOUNCEMENT BAR / BADGE -->
+    <div
+        class="bg-om-navy text-om-gold-light text-xs font-semibold py-2 px-4 text-center tracking-widest uppercase border-b border-om-gold/30">
+        <span class="inline-flex items-center gap-2">
+            <span class="w-2 h-2 rounded-full bg-om-gold animate-pulse"></span>
+            Selamat datang di Ruang Digital Ardi Aprianto (Ardi.a) • Kelas 11 SMA
+        </span>
+    </div>
+
+    <!-- NAVIGATION HEADER -->
+    <header
+        class="sticky top-0 z-50 backdrop-blur-md bg-om-cream/90 dark:bg-om-navy-dark/90 border-b border-om-gold/20 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <!-- LOGO / BRAND -->
+                <a href="index.html" class="flex items-center gap-3 group">
+                    <div
+                        class="w-10 h-10 rounded-full border-2 border-om-gold flex items-center justify-center bg-om-navy text-om-gold font-serif font-bold text-xl shadow-md group-hover:scale-105 transition-transform duration-300">
+                        A
+                    </div>
+                    <div>
+                        <span
+                            class="font-serif text-2xl font-bold tracking-tight text-om-navy dark:text-om-gold block leading-none">Ardi.a</span>
+                        <span
+                            class="text-[10px] tracking-widest uppercase text-om-gold-dark dark:text-gray-400 font-semibold">Digital
+                            Archive</span>
+                    </div>
+                </a>
+
+                <!-- DESKTOP NAVIGATION -->
+                <nav class="hidden md:flex items-center space-x-1 lg:space-x-2">
+                    <a href="index.html" id="nav-dashboard"
+                        class="nav-btn px-4 py-2 rounded-md font-medium text-sm transition-all duration-200">
+                        <i class="fa-solid fa-compass mr-1.5 text-xs opacity-75"></i> Dashboard
+                    </a>
+                    <a href="profile.html" id="nav-profil"
+                        class="nav-btn px-4 py-2 rounded-md font-medium text-sm transition-all duration-200">
+                        <i class="fa-solid fa-user-tie mr-1.5 text-xs opacity-75"></i> Profil
+                    </a>
+                    <a href="informatika.html" id="nav-informatika"
+                        class="nav-btn px-4 py-2 rounded-md font-medium text-sm transition-all duration-200">
+                        <i class="fa-solid fa-code mr-1.5 text-xs opacity-75"></i> Informatika
+                    </a>
+                    <a href="bahasa-indonesia.html" id="nav-bahasa-indonesia"
+                        class="nav-btn active-nav px-4 py-2 rounded-md font-medium text-sm transition-all duration-200">
+                        <i class="fa-solid fa-book-bookmark mr-1.5 text-xs opacity-75"></i> Bahasa Indonesia
+                    </a>
+                    <a href="schedule.html" id="nav-schedule"
+                        class="nav-btn px-4 py-2 rounded-md font-medium text-sm transition-all duration-200">
+                        <i class="fa-solid fa-calendar-days mr-1.5 text-xs opacity-75"></i> Schedule
+                    </a>
+                    <a href="minigames.html" id="nav-minigames"
+                        class="nav-btn px-4 py-2 rounded-md font-medium text-sm transition-all duration-200">
+                        <i class="fa-solid fa-gamepad mr-1.5 text-xs opacity-75"></i> Mini Games
+                    </a>
+                </nav>
+
+                <!-- RIGHT CONTROLS (Theme Toggle & Mobile Button) -->
+                <div class="flex items-center space-x-3">
+                    <!-- DARK / LIGHT MODE TOGGLE BUTTON -->
+                    <button id="theme-toggle" type="button" aria-label="Toggle Theme"
+                        class="p-2.5 rounded-full border border-om-gold/40 text-om-navy dark:text-om-gold bg-om-cream-dark/50 dark:bg-om-card-dark hover:bg-om-gold/20 dark:hover:bg-om-gold/20 transition-all duration-300 shadow-sm focus:outline-none">
+                        <i id="theme-toggle-dark-icon" class="fa-solid fa-moon text-base hidden"></i>
+                        <i id="theme-toggle-light-icon" class="fa-solid fa-sun text-base hidden text-om-gold"></i>
+                    </button>
+
+                    <!-- MOBILE MENU BUTTON -->
+                    <button id="mobile-menu-btn" type="button"
+                        class="md:hidden p-2 rounded-md text-om-navy dark:text-om-gold hover:bg-om-gold/20 focus:outline-none">
+                        <i class="fa-solid fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- MOBILE MENU DRAWER -->
+        <div id="mobile-menu"
+            class="hidden md:hidden border-t border-om-gold/20 bg-om-cream dark:bg-om-navy px-4 pt-3 pb-6 space-y-2">
+            <a href="index.html" id="mobile-nav-dashboard"
+                class="mobile-nav-btn w-full text-left px-4 py-3 rounded-lg text-base font-medium flex items-center justify-between">
+                <span><i class="fa-solid fa-compass mr-3"></i> Dashboard</span>
+                <i class="fa-solid fa-chevron-right text-xs opacity-50"></i>
+            </a>
+            <a href="profile.html" id="mobile-nav-profil"
+                class="mobile-nav-btn w-full text-left px-4 py-3 rounded-lg text-base font-medium flex items-center justify-between">
+                <span><i class="fa-solid fa-user-tie mr-3"></i> Profil</span>
+                <i class="fa-solid fa-chevron-right text-xs opacity-50"></i>
+            </a>
+            <a href="informatika.html" id="mobile-nav-informatika"
+                class="mobile-nav-btn w-full text-left px-4 py-3 rounded-lg text-base font-medium flex items-center justify-between">
+                <span><i class="fa-solid fa-code mr-3"></i> Informatika</span>
+                <i class="fa-solid fa-chevron-right text-xs opacity-50"></i>
+            </a>
+            <a href="bahasa-indonesia.html" id="mobile-nav-bahasa-indonesia"
+                class="mobile-nav-btn active-mobile-nav w-full text-left px-4 py-3 rounded-lg text-base font-medium flex items-center justify-between">
+                <span><i class="fa-solid fa-book-bookmark mr-3"></i> Bahasa Indonesia</span>
+                <i class="fa-solid fa-chevron-right text-xs opacity-50"></i>
+            </a>
+            <a href="schedule.html" id="mobile-nav-schedule"
+                class="mobile-nav-btn w-full text-left px-4 py-3 rounded-lg text-base font-medium flex items-center justify-between">
+                <span><i class="fa-solid fa-calendar-days mr-3"></i> Schedule</span>
+                <i class="fa-solid fa-chevron-right text-xs opacity-50"></i>
+            </a>
+            <a href="minigames.html" id="mobile-nav-minigames"
+                class="mobile-nav-btn w-full text-left px-4 py-3 rounded-lg text-base font-medium flex items-center justify-between">
+                <span><i class="fa-solid fa-gamepad mr-3"></i> Mini Games</span>
+                <i class="fa-solid fa-chevron-right text-xs opacity-50"></i>
+            </a>
+        </div>
+    </header>
+
+    <!-- MAIN CONTENT CONTAINER -->
+    <main class="flex-grow max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-8 md:py-12">
+
+        <!-- SECTION: BAHASA INDONESIA -->
+        <section id="sec-bahasa-indonesia" class="tab-content">
+            <!-- PAGE TITLE -->
+            <div class="mb-10 text-center">
+                <span class="text-xs font-bold uppercase tracking-widest text-om-gold block mb-2">Dokumentasi Materi</span>
+                <h2 class="font-serif text-3xl sm:text-4xl md:text-5xl font-bold text-om-navy dark:text-white">Bahasa Indonesia</h2>
+                <p class="text-sm text-gray-600 dark:text-gray-400 mt-2 max-w-xl mx-auto">
+                    Tekan tombol judul materi di bawah ini untuk membaca artikel lengkap (4 paragraf, 5 kalimat per paragraf).
+                </p>
+                <div class="w-16 h-1 bg-om-gold mx-auto mt-4 rounded-full"></div>
+
+                <!-- CONTROLS: EXPAND ALL / COLLAPSE ALL -->
+                <div class="mt-6 flex justify-center gap-3">
+                    <button onclick="toggleAllMaterials(true)"
+                        class="px-4 py-2 rounded-lg bg-om-navy dark:bg-om-gold text-om-cream dark:text-om-navy text-xs font-semibold hover:opacity-90 transition-all flex items-center gap-1.5 shadow-sm">
+                        <i class="fa-solid fa-folder-open"></i> Buka Semua Artikel
+                    </button>
+                    <button onclick="toggleAllMaterials(false)"
+                        class="px-4 py-2 rounded-lg border border-om-gold/40 text-om-navy dark:text-om-gold hover:bg-om-gold/10 text-xs font-semibold transition-all flex items-center gap-1.5">
+                        <i class="fa-solid fa-folder"></i> Tutup Semua Artikel
+                    </button>
+                </div>
+            </div>
+
+            <!-- QUICK MATERIAL TITLE BUTTONS GRID (BARISAN TOMBOL UTAMA - 6 MATERI) -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mb-10">
+                <!-- 1. Teks LHO -->
+                <button onclick="openMaterial('teks-lho')"
+                    class="p-5 rounded-xl bg-om-card-light dark:bg-om-card-dark border border-om-gold/30 hover:border-om-gold transition-all duration-300 shadow-md hover:-translate-y-1 text-left flex items-center gap-4 group">
+                    <div class="w-12 h-12 rounded-lg bg-om-gold/15 text-om-gold flex items-center justify-center text-xl shrink-0 group-hover:bg-om-gold group-hover:text-om-navy transition-colors">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </div>
+                    <div>
+                        <span class="text-[10px] font-bold uppercase tracking-wider text-om-gold block">Materi 01</span>
+                        <h3 class="font-serif font-bold text-lg text-om-navy dark:text-white group-hover:text-om-gold transition-colors">1. Teks LHO</h3>
+                    </div>
+                </button>
+
+                <!-- 2. Teks Anekdot -->
+                <button onclick="openMaterial('teks-anekdot')"
+                    class="p-5 rounded-xl bg-om-card-light dark:bg-om-card-dark border border-om-gold/30 hover:border-om-gold transition-all duration-300 shadow-md hover:-translate-y-1 text-left flex items-center gap-4 group">
+                    <div class="w-12 h-12 rounded-lg bg-om-gold/15 text-om-gold flex items-center justify-center text-xl shrink-0 group-hover:bg-om-gold group-hover:text-om-navy transition-colors">
+                        <i class="fa-solid fa-masks-theater"></i>
+                    </div>
+                    <div>
+                        <span class="text-[10px] font-bold uppercase tracking-wider text-om-gold block">Materi 02</span>
+                        <h3 class="font-serif font-bold text-lg text-om-navy dark:text-white group-hover:text-om-gold transition-colors">2. Teks Anekdot</h3>
+                    </div>
+                </button>
+
+                <!-- 3. Teks Hikayat -->
+                <button onclick="openMaterial('teks-hikayat')"
+                    class="p-5 rounded-xl bg-om-card-light dark:bg-om-card-dark border border-om-gold/30 hover:border-om-gold transition-all duration-300 shadow-md hover:-translate-y-1 text-left flex items-center gap-4 group">
+                    <div class="w-12 h-12 rounded-lg bg-om-gold/15 text-om-gold flex items-center justify-center text-xl shrink-0 group-hover:bg-om-gold group-hover:text-om-navy transition-colors">
+                        <i class="fa-solid fa-scroll"></i>
+                    </div>
+                    <div>
+                        <span class="text-[10px] font-bold uppercase tracking-wider text-om-gold block">Materi 03</span>
+                        <h3 class="font-serif font-bold text-lg text-om-navy dark:text-white group-hover:text-om-gold transition-colors">3. Teks Hikayat</h3>
+                    </div>
+                </button>
+
+                <!-- 4. Teks Negosiasi -->
+                <button onclick="openMaterial('teks-negosiasi')"
+                    class="p-5 rounded-xl bg-om-card-light dark:bg-om-card-dark border border-om-gold/30 hover:border-om-gold transition-all duration-300 shadow-md hover:-translate-y-1 text-left flex items-center gap-4 group">
+                    <div class="w-12 h-12 rounded-lg bg-om-gold/15 text-om-gold flex items-center justify-center text-xl shrink-0 group-hover:bg-om-gold group-hover:text-om-navy transition-colors">
+                        <i class="fa-solid fa-handshake"></i>
+                    </div>
+                    <div>
+                        <span class="text-[10px] font-bold uppercase tracking-wider text-om-gold block">Materi 04</span>
+                        <h3 class="font-serif font-bold text-lg text-om-navy dark:text-white group-hover:text-om-gold transition-colors">4. Teks Negosiasi</h3>
+                    </div>
+                </button>
+
+                <!-- 5. Teks Biografi -->
+                <button onclick="openMaterial('teks-biografi')"
+                    class="p-5 rounded-xl bg-om-card-light dark:bg-om-card-dark border border-om-gold/30 hover:border-om-gold transition-all duration-300 shadow-md hover:-translate-y-1 text-left flex items-center gap-4 group">
+                    <div class="w-12 h-12 rounded-lg bg-om-gold/15 text-om-gold flex items-center justify-center text-xl shrink-0 group-hover:bg-om-gold group-hover:text-om-navy transition-colors">
+                        <i class="fa-solid fa-book-open-reader"></i>
+                    </div>
+                    <div>
+                        <span class="text-[10px] font-bold uppercase tracking-wider text-om-gold block">Materi 05</span>
+                        <h3 class="font-serif font-bold text-lg text-om-navy dark:text-white group-hover:text-om-gold transition-colors">5. Teks Biografi</h3>
+                    </div>
+                </button>
+
+                <!-- 6. Musikalisasi Puisi -->
+                <button onclick="openMaterial('musikalisasi-puisi')"
+                    class="p-5 rounded-xl bg-om-card-light dark:bg-om-card-dark border border-om-gold/30 hover:border-om-gold transition-all duration-300 shadow-md hover:-translate-y-1 text-left flex items-center gap-4 group">
+                    <div class="w-12 h-12 rounded-lg bg-om-gold/15 text-om-gold flex items-center justify-center text-xl shrink-0 group-hover:bg-om-gold group-hover:text-om-navy transition-colors">
+                        <i class="fa-solid fa-music"></i>
+                    </div>
+                    <div>
+                        <span class="text-[10px] font-bold uppercase tracking-wider text-om-gold block">Materi 06</span>
+                        <h3 class="font-serif font-bold text-lg text-om-navy dark:text-white group-hover:text-om-gold transition-colors">6. Musikalisasi Puisi</h3>
+                    </div>
+                </button>
+            </div>
+
+            <!-- EXPANDABLE MATERIAL CARDS CONTAINER -->
+            <div class="space-y-8 max-w-5xl mx-auto">
+
+                <!-- MATERI 1: TEKS LHO -->
+                <div id="material-card-teks-lho" class="rounded-2xl bg-om-card-light dark:bg-om-card-dark border border-om-gold/30 shadow-xl overflow-hidden transition-all duration-300">
+                    <!-- TITLE BUTTON HEADER -->
+                    <button onclick="toggleMaterial('teks-lho')" id="material-btn-teks-lho"
+                        class="w-full p-6 sm:p-8 text-left bg-gradient-to-r from-om-cream via-om-card-light to-om-cream dark:from-om-navy dark:via-om-card-dark dark:to-om-navy border-b border-om-gold/20 flex items-center justify-between gap-4 hover:bg-om-gold/5 transition-colors focus:outline-none">
+                        <div class="flex items-center gap-4 sm:gap-6">
+                            <div class="w-12 h-12 sm:w-14 sm:h-14 rounded-xl bg-om-navy dark:bg-om-gold text-om-gold dark:text-om-navy flex items-center justify-center text-xl sm:text-2xl shrink-0 shadow-md">
+                                <i class="fa-solid fa-magnifying-glass"></i>
+                            </div>
+                            <div>
+                                <span class="px-2.5 py-0.5 rounded-full text-[10px] font-bold uppercase tracking-wider bg-om-gold/15 text-om-gold-dark dark:text-om-gold border border-om-gold/30">Materi 01</span>
+                                <h3 class="font-serif text-2xl sm:text-3xl font-bold text-om-navy dark:text-white mt-1">1. Teks LHO (Laporan Hasil Observasi)</h3>
+                                <p class="text-xs sm:text-sm text-gray-600 dark:text-gray-400 mt-0.5">Pengamatan Fakta Empiris & Analisis Ilmiah (4 Paragraf, 5 Kalimat per Paragraf)</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <span class="hidden sm:inline-block text-xs font-semibold text-om-gold">Tekan untuk buka</span>
+                            <div class="w-10 h-10 rounded-full border border-om-gold/40 flex items-center justify-center bg-om-cream dark:bg-om-navy text-om-navy dark:text-om-gold shadow-sm">
+                                <i id="material-icon-teks-lho" class="fa-solid fa-chevron-down opacity-60 transition-transform duration-300"></i>
+                            </div>
+                        </div>
+                    </button>
+
+                    <!-- MATERIAL CONTENT (HIDDEN INITIALLY) -->
+                    <div id="material-content-teks-lho" class="p-6 sm:p-10 hidden border-t border-om-gold/20">
+                        <!-- Gambar Artikel -->
+                        <div class="relative w-full h-[250px] sm:h-[320px] rounded-2xl overflow-hidden mb-8 shadow-md">
+                            <img src="teks_lho.png" alt="Teks LHO Observasi" class="w-full h-full object-cover">
+                            <div class="absolute inset-0 bg-black/35 pointer-events-none"></div>
+                            <div class="absolute bottom-4 left-4 bg-om-navy/80 backdrop-blur-md px-4 py-2 rounded-lg border border-om-gold/30 text-white text-xs font-mono">
+                                <i class="fa-solid fa-book text-om-gold mr-2"></i> Artikel Teks LHO • 4 Paragraf (5 Kalimat / Paragraf)
+                            </div>
+                        </div>
+
+                        <!-- Informasi Tugas Metadata -->
+                        <div class="grid grid-cols-2 md:grid-cols-4 gap-4 p-4 rounded-xl bg-om-cream dark:bg-om-navy/40 border border-om-gold/20 mb-8 text-xs sm:text-sm">
+                            <div>
+                                <span class="text-gray-500 dark:text-gray-400 block mb-1">Status Tugas:</span>
+                                <span class="px-2.5 py-1 rounded bg-emerald-500/20 text-emerald-700 dark:text-emerald-400 font-semibold uppercase tracking-wider text-[10px]">Telah Dikumpulkan</span>
+                            </div>
+                            <div>
+                                <span class="text-gray-500 dark:text-gray-400 block mb-1">Mata Pelajaran:</span>
+                                <span class="font-bold text-om-navy dark:text-om-gold">Bahasa Indonesia</span>
+                            </div>
+                            <div>
+                                <span class="text-gray-500 dark:text-gray-400 block mb-1">Pengajar:</span>
+                                <span class="font-bold text-om-navy dark:text-om-gold">Guru Bahasa Indonesia</span>
+                            </div>
+                            <div>
+                                <span class="text-gray-500 dark:text-gray-400 block mb-1">Nilai Evaluasi:</span>
+                                <span class="font-bold text-emerald-600 dark:text-emerald-400">96 / 100</span>
+                            </div>
+                        </div>
+
+                        <!-- ISI ARTIKEL LENGKAP: 4 PARAGRAF (5 KALIMAT PER PARAGRAF) -->
+                        <div class="text-sm text-gray-700 dark:text-gray-300 space-y-6 text-justify leading-relaxed font-sans">
+                            <!-- Paragraf 1 (5 Kalimat) -->
+                            <p class="p-4 rounded-xl bg-om-cream/50 dark:bg-om-navy/30 border-l-4 border-om-gold">
+                                Teks Laporan Hasil Observasi atau disingkat LHO adalah karya tulis yang menyajikan informasi berdasarkan hasil pengamatan langsung. Pengamatan dilakukan secara objektif dan sistematis terhadap objek alam, fenomena sosial, atau lingkungan sekitar pengamat. Tujuan utama penulisan teks ini adalah untuk memberikan fakta ilmiah yang akurat tanpa dipengaruhi pendapat pribadi. Informasi yang disampaikan dalam teks LHO bersifat umum dan memuat klasifikasi mengenai objek yang diteliti tersebut. Melalui penulisan LHO siswa dilatih untuk berpikir kritis serta cermat dalam merekam detail fakta di lapangan.
+                            </p>
+
+                            <!-- Paragraf 2 (5 Kalimat) -->
+                            <p class="p-4 rounded-xl bg-om-cream/50 dark:bg-om-navy/30 border-l-4 border-om-gold">
+                                Struktur pembangun teks Laporan Hasil Observasi secara umum terdiri atas tiga bagian utama yang saling berkaitan. Bagian pertama adalah pernyataan umum yang berisi definisi pembuka serta klasifikasi awal mengenai objek pengamatan. Bagian kedua dinamakan deskripsi bagian yang menjelaskan rincian detail mengenai karakteristik dan sifat fisik objek. Bagian ketiga adalah deskripsi manfaat yang menguraikan kegunaan serta nilai penting objek tersebut bagi kehidupan manusia. Ketiga bagian struktur ini harus disusun secara runtut agar informasi dapat dipahami oleh pembaca dengan mudah.
+                            </p>
+
+                            <!-- Paragraf 3 (5 Kalimat) -->
+                            <p class="p-4 rounded-xl bg-om-cream/50 dark:bg-om-navy/30 border-l-4 border-om-gold">
+                                Ciri kebahasaaan dalam teks LHO ditandai dengan penggunaan kata kerja material dan kata sifat ilmiah yang jelas. Kalimat definisi yang ditandai kata merupakan atau adalah sering digunakan pada paragraf awal pengenalan objek pengamatan. Penggunaan kata benda serta kelompok kata nomina dominan ditemukan untuk menjelaskan aspek klasifikasi objek secara terperinci. Penulis juga menggunakan konjungsi penambahan serta kalimat imperatif untuk memperjelas hasil analisa fakta pengamatan di lapangan. Bahasa yang digunakan harus bersifat baku lugas dan bebas dari kalimat ambigu agar keabsahan data tetap terjaga.
+                            </p>
+
+                            <!-- Paragraf 4 (5 Kalimat) -->
+                            <p class="p-4 rounded-xl bg-om-cream/50 dark:bg-om-navy/30 border-l-4 border-om-gold">
+                                Penyusunan teks Laporan Hasil Observasi diawali dengan menentukan objek penelitian serta merumuskan tujuan pengamatan secara jelas. Pengamat kemudian mencatat seluruh data lapangan melalui instrumen lembar observasi maupun dokumentasi foto secara berkala. Data kasar yang diperoleh selanjutnya diolah dan disusun kembali mengikuti kaidah struktur penulisan LHO yang baku. Hasil akhir karangan LHO dapat dipublikasikan sebagai jurnal ilmiah sekolah atau laporan kegiatan belajar siswa. Kesimpulannya teks LHO merupakan instrumen penting untuk melatih budaya literasi dan kebiasaan berpikir berbasis fakta empiris.
+                            </p>
+                        </div>
+
+                        <!-- TAGS & BOTTOM CLOSE BUTTON -->
+                        <div class="mt-6 pt-6 border-t border-om-gold/20 flex flex-wrap items-center justify-between gap-4">
+                            <div class="flex flex-wrap gap-2">
+                                <span class="px-2.5 py-1 rounded bg-om-cream dark:bg-om-navy/50 text-[10px] font-bold text-om-gold uppercase tracking-wider border border-om-gold/30">#TeksLHO</span>
+                                <span class="px-2.5 py-1 rounded bg-om-cream dark:bg-om-navy/50 text-[10px] font-bold text-om-gold uppercase tracking-wider border border-om-gold/30">#ObservasiFakta</span>
+                                <span class="px-2.5 py-1 rounded bg-om-cream dark:bg-om-navy/50 text-[10px] font-bold text-om-gold uppercase tracking-wider border border-om-gold/30">#4Paragraf5Kalimat</span>
+                            </div>
+                            <button onclick="toggleMaterial('teks-lho')"
+                                class="px-4 py-2 text-xs font-semibold rounded-lg border border-om-gold/40 text-om-navy dark:text-om-gold hover:bg-om-gold hover:text-om-navy transition-all">
+                                <i class="fa-solid fa-chevron-up mr-1.5"></i> Tutup Artikel
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- MATERI 2: TEKS ANEKDOT -->
+                <div id="material-card-teks-anekdot" class="rounded-2xl bg-om-card-light dark:bg-om-card-dark border border-om-gold/30 shadow-xl overflow-hidden transition-all duration-300">
+                    <!-- TITLE BUTTON HEADER -->
+                    <button onclick="toggleMaterial('teks-anekdot')" id="material-btn-teks-anekdot"
+                        class="w-full p-6 sm:p-8 text-left bg-gradient-to-r from-om-cream via-om-card-light to-om-cream dark:from-om-navy dark:via-om-card-dark dark:to-om-navy border-b border-om-gold/20 flex items-center justify-between gap-4 hover:bg-om-gold/5 transition-colors focus:outline-none">
+                        <div class="flex items-center gap-4 sm:gap-6">
+                            <div class="w-12 h-12 sm:w-14 sm:h-14 rounded-xl bg-om-navy dark:bg-om-gold text-om-gold dark:text-om-navy flex items-center justify-center text-xl sm:text-2xl shrink-0 shadow-md">
+                                <i class="fa-solid fa-masks-theater"></i>
+                            </div>
+                            <div>
+                                <span class="px-2.5 py-0.5 rounded-full text-[10px] font-bold uppercase tracking-wider bg-om-gold/15 text-om-gold-dark dark:text-om-gold border border-om-gold/30">Materi 02</span>
+                                <h3 class="font-serif text-2xl sm:text-3xl font-bold text-om-navy dark:text-white mt-1">2. Teks Anekdot</h3>
+                                <p class="text-xs sm:text-sm text-gray-600 dark:text-gray-400 mt-0.5">Cerita Jenaka & Kritik Sosial Beretika (4 Paragraf, 5 Kalimat per Paragraf)</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <span class="hidden sm:inline-block text-xs font-semibold text-om-gold">Tekan untuk buka</span>
+                            <div class="w-10 h-10 rounded-full border border-om-gold/40 flex items-center justify-center bg-om-cream dark:bg-om-navy text-om-navy dark:text-om-gold shadow-sm">
+                                <i id="material-icon-teks-anekdot" class="fa-solid fa-chevron-down opacity-60 transition-transform duration-300"></i>
+                            </div>
+                        </div>
+                    </button>
+
+                    <!-- MATERIAL CONTENT (HIDDEN INITIALLY) -->
+                    <div id="material-content-teks-anekdot" class="p-6 sm:p-10 hidden border-t border-om-gold/20">
+                        <!-- Gambar Artikel -->
+                        <div class="relative w-full h-[250px] sm:h-[320px] rounded-2xl overflow-hidden mb-8 shadow-md">
+                            <img src="teks_anekdot.png" alt="Teks Anekdot Humor Sastra" class="w-full h-full object-cover">
+                            <div class="absolute inset-0 bg-black/35 pointer-events-none"></div>
+                            <div class="absolute bottom-4 left-4 bg-om-navy/80 backdrop-blur-md px-4 py-2 rounded-lg border border-om-gold/30 text-white text-xs font-mono">
+                                <i class="fa-solid fa-masks-theater text-om-gold mr-2"></i> Artikel Teks Anekdot • 4 Paragraf (5 Kalimat / Paragraf)
+                            </div>
+                        </div>
+
+                        <!-- Informasi Tugas Metadata -->
+                        <div class="grid grid-cols-2 md:grid-cols-4 gap-4 p-4 rounded-xl bg-om-cream dark:bg-om-navy/40 border border-om-gold/20 mb-8 text-xs sm:text-sm">
+                            <div>
+                                <span class="text-gray-500 dark:text-gray-400 block mb-1">Status Tugas:</span>
+                                <span class="px-2.5 py-1 rounded bg-emerald-500/20 text-emerald-700 dark:text-emerald-400 font-semibold uppercase tracking-wider text-[10px]">Telah Dikumpulkan</span>
+                            </div>
+                            <div>
+                                <span class="text-gray-500 dark:text-gray-400 block mb-1">Mata Pelajaran:</span>
+                                <span class="font-bold text-om-navy dark:text-om-gold">Bahasa Indonesia</span>
+                            </div>
+                            <div>
+                                <span class="text-gray-500 dark:text-gray-400 block mb-1">Pengajar:</span>
+                                <span class="font-bold text-om-navy dark:text-om-gold">Guru Bahasa Indonesia</span>
+                            </div>
+                            <div>
+                                <span class="text-gray-500 dark:text-gray-400 block mb-1">Nilai Evaluasi:</span>
+                                <span class="font-bold text-emerald-600 dark:text-emerald-400">98 / 100</span>
+                            </div>
+                        </div>
+
+                        <!-- ISI ARTIKEL LENGKAP: 4 PARAGRAF (5 KALIMAT PER PARAGRAF) -->
+                        <div class="text-sm text-gray-700 dark:text-gray-300 space-y-6 text-justify leading-relaxed font-sans">
+                            <!-- Paragraf 1 (5 Kalimat) -->
+                            <p class="p-4 rounded-xl bg-om-cream/50 dark:bg-om-navy/30 border-l-4 border-om-gold">
+                                Teks anekdot merupakan cerita singkat yang menarik lucu dan berisi sindiran halus terhadap fenomena yang terjadi di masyarakat. Cerita dalam anekdot biasanya diangkat dari kejadian nyata yang melibatkan tokoh publik atau kehidupan sehari-hari warga. Meskipun mengemas cerita dengan unsur humor tujuan utama anekdot bukanlah sekadar menghibur pembaca atau pendengar. Fungsi utama teks anekdot adalah menyampaikan kritik sosial politik atau layanan publik secara terbuka namun tetap beretika. Kehadiran teks anekdot menjadi media penyampaian aspirasi kritik masyarakat yang efektif melalui pendekatan karya sastra jenaka.
+                            </p>
+
+                            <!-- Paragraf 2 (5 Kalimat) -->
+                            <p class="p-4 rounded-xl bg-om-cream/50 dark:bg-om-navy/30 border-l-4 border-om-gold">
+                                Struktur penulisan teks anekdot dibangun oleh lima unsur utama yaitu abstraksi orientasi krisis reaksi dan koda. Abstraksi berfungsi sebagai gambaran awal tentang latar belakang cerita yang akan disajikan kepada para pembaca. Orientasi menjelaskan suasana dan latar belakang terjadinya peristiwa awal yang memicu munculnya konflik utama cerita. Krisis merupakan bagian inti dari anekdot tempat terjadinya puncak kejanggalan atau masalah lucu yang sangat mengesan. Reaksi dan koda berisi langkah penyelesaian masalah serta kesimpulan penutup yang menegaskan pesan kritik cerita tersebut.
+                            </p>
+
+                            <!-- Paragraf 3 (5 Kalimat) -->
+                            <p class="p-4 rounded-xl bg-om-cream/50 dark:bg-om-navy/30 border-l-4 border-om-gold">
+                                Kaidah kebahasaan teks anekdot ditandai dengan penggunaan kalimat yang menyatakan peristiwa masa lalu atau latar waktu. Penggunaan konjungsi kronologis atau urutan waktu seperti lalu kemudian dan setelah itu sangat mendominasi cerita. Kalimat seru kata kerja aksi serta kata kiasan sering disisipkan untuk memperkuat kesan humor dan sindiran halus. Penulis anekdot juga kerap memanfaatkan pertanyaan retoris yang tidak memerlukan jawaban langsung untuk menyentil kesadaran pembaca. Pilihan kata yang cerdas dan kaya humor membuat sindiran dalam teks anekdot terasa tajam namun tetap menyenangkan.
+                            </p>
+
+                            <!-- Paragraf 4 (5 Kalimat) -->
+                            <p class="p-4 rounded-xl bg-om-cream/50 dark:bg-om-navy/30 border-l-4 border-om-gold">
+                                Proses kreatif penulisan teks anekdot diawali dengan mengamati isu-isu sosial yang sedang hangat diperbincangkan publik. Penulis kemudian mengolah isu tersebut menjadi jalan cerita rekaan yang dibumbui kejutan konflik serta komedi jenaka. Penyampaian kritik melalui teks anekdot dinilai lebih santun dan mudah diterima oleh pihak yang dikritik masyarakat. Di lingkungan sekolah pembelajaran anekdot sangat berguna untuk mengasah kreativitas menulis dan kepekaan sosial siswa. Kesimpulannya teks anekdot adalah media ekspresi sastra yang memadukan humor cerdas dengan pesan kritik sosial yang bernilai.
+                            </p>
+                        </div>
+
+                        <!-- TAGS & BOTTOM CLOSE BUTTON -->
+                        <div class="mt-6 pt-6 border-t border-om-gold/20 flex flex-wrap items-center justify-between gap-4">
+                            <div class="flex flex-wrap gap-2">
+                                <span class="px-2.5 py-1 rounded bg-om-cream dark:bg-om-navy/50 text-[10px] font-bold text-om-gold uppercase tracking-wider border border-om-gold/30">#TeksAnekdot</span>
+                                <span class="px-2.5 py-1 rounded bg-om-cream dark:bg-om-navy/50 text-[10px] font-bold text-om-gold uppercase tracking-wider border border-om-gold/30">#KritikSosialJenaka</span>
+                                <span class="px-2.5 py-1 rounded bg-om-cream dark:bg-om-navy/50 text-[10px] font-bold text-om-gold uppercase tracking-wider border border-om-gold/30">#4Paragraf5Kalimat</span>
+                            </div>
+                            <button onclick="toggleMaterial('teks-anekdot')"
+                                class="px-4 py-2 text-xs font-semibold rounded-lg border border-om-gold/40 text-om-navy dark:text-om-gold hover:bg-om-gold hover:text-om-navy transition-all">
+                                <i class="fa-solid fa-chevron-up mr-1.5"></i> Tutup Artikel
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- MATERI 3: TEKS HIKAYAT -->
+                <div id="material-card-teks-hikayat" class="rounded-2xl bg-om-card-light dark:bg-om-card-dark border border-om-gold/30 shadow-xl overflow-hidden transition-all duration-300">
+                    <!-- TITLE BUTTON HEADER -->
+                    <button onclick="toggleMaterial('teks-hikayat')" id="material-btn-teks-hikayat"
+                        class="w-full p-6 sm:p-8 text-left bg-gradient-to-r from-om-cream via-om-card-light to-om-cream dark:from-om-navy dark:via-om-card-dark dark:to-om-navy border-b border-om-gold/20 flex items-center justify-between gap-4 hover:bg-om-gold/5 transition-colors focus:outline-none">
+                        <div class="flex items-center gap-4 sm:gap-6">
+                            <div class="w-12 h-12 sm:w-14 sm:h-14 rounded-xl bg-om-navy dark:bg-om-gold text-om-gold dark:text-om-navy flex items-center justify-center text-xl sm:text-2xl shrink-0 shadow-md">
+                                <i class="fa-solid fa-scroll"></i>
+                            </div>
+                            <div>
+                                <span class="px-2.5 py-0.5 rounded-full text-[10px] font-bold uppercase tracking-wider bg-om-gold/15 text-om-gold-dark dark:text-om-gold border border-om-gold/30">Materi 03</span>
+                                <h3 class="font-serif text-2xl sm:text-3xl font-bold text-om-navy dark:text-white mt-1">3. Teks Hikayat</h3>
+                                <p class="text-xs sm:text-sm text-gray-600 dark:text-gray-400 mt-0.5">Sastra Klasik Melayu & Nilai Pahlawan (4 Paragraf, 5 Kalimat per Paragraf)</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <span class="hidden sm:inline-block text-xs font-semibold text-om-gold">Tekan untuk buka</span>
+                            <div class="w-10 h-10 rounded-full border border-om-gold/40 flex items-center justify-center bg-om-cream dark:bg-om-navy text-om-navy dark:text-om-gold shadow-sm">
+                                <i id="material-icon-teks-hikayat" class="fa-solid fa-chevron-down opacity-60 transition-transform duration-300"></i>
+                            </div>
+                        </div>
+                    </button>
+
+                    <!-- MATERIAL CONTENT (HIDDEN INITIALLY) -->
+                    <div id="material-content-teks-hikayat" class="p-6 sm:p-10 hidden border-t border-om-gold/20">
+                        <!-- Gambar Artikel -->
+                        <div class="relative w-full h-[250px] sm:h-[320px] rounded-2xl overflow-hidden mb-8 shadow-md">
+                            <img src="teks_hikayat.png" alt="Teks Hikayat Sastra Klasik" class="w-full h-full object-cover">
+                            <div class="absolute inset-0 bg-black/35 pointer-events-none"></div>
+                            <div class="absolute bottom-4 left-4 bg-om-navy/80 backdrop-blur-md px-4 py-2 rounded-lg border border-om-gold/30 text-white text-xs font-mono">
+                                <i class="fa-solid fa-scroll text-om-gold mr-2"></i> Artikel Teks Hikayat • 4 Paragraf (5 Kalimat / Paragraf)
+                            </div>
+                        </div>
+
+                        <!-- Informasi Tugas Metadata -->
+                        <div class="grid grid-cols-2 md:grid-cols-4 gap-4 p-4 rounded-xl bg-om-cream dark:bg-om-navy/40 border border-om-gold/20 mb-8 text-xs sm:text-sm">
+                            <div>
+                                <span class="text-gray-500 dark:text-gray-400 block mb-1">Status Tugas:</span>
+                                <span class="px-2.5 py-1 rounded bg-emerald-500/20 text-emerald-700 dark:text-emerald-400 font-semibold uppercase tracking-wider text-[10px]">Telah Dikumpulkan</span>
+                            </div>
+                            <div>
+                                <span class="text-gray-500 dark:text-gray-400 block mb-1">Mata Pelajaran:</span>
+                                <span class="font-bold text-om-navy dark:text-om-gold">Bahasa Indonesia</span>
+                            </div>
+                            <div>
+                                <span class="text-gray-500 dark:text-gray-400 block mb-1">Pengajar:</span>
+                                <span class="font-bold text-om-navy dark:text-om-gold">Guru Bahasa Indonesia</span>
+                            </div>
+                            <div>
+                                <span class="text-gray-500 dark:text-gray-400 block mb-1">Nilai Evaluasi:</span>
+                                <span class="font-bold text-emerald-600 dark:text-emerald-400">95 / 100</span>
+                            </div>
+                        </div>
+
+                        <!-- ISI ARTIKEL LENGKAP: 4 PARAGRAF (5 KALIMAT PER PARAGRAF) -->
+                        <div class="text-sm text-gray-700 dark:text-gray-300 space-y-6 text-justify leading-relaxed font-sans">
+                            <!-- Paragraf 1 (5 Kalimat) -->
+                            <p class="p-4 rounded-xl bg-om-cream/50 dark:bg-om-navy/30 border-l-4 border-om-gold">
+                                Teks hikayat merupakan karya sastra Melayu klasik berbentuk prosa yang mengisahkan kehebatan serta kesaktian para raja. Kesusastraan kuno ini berkembang pada zaman Melayu klasik dengan membawa unsur kemustahilan serta keajaiban yang kental. Tokoh-tokoh dalam hikayat umumnya digambarkan memiliki kekuatan gaib yang tidak dimiliki oleh manusia pada umumnya. Selain fungsi hiburan hikayat pada zaman dahulu dibacakan untuk membangkitkan semangat juang para prajurit kerajaan. Penulisan hikayat bersifat anonim karena nama pengarang aslinya tidak pernah dicantumkan dalam naskah manuskrip Kuno tersebut.
+                            </p>
+
+                            <!-- Paragraf 2 (5 Kalimat) -->
+                            <p class="p-4 rounded-xl bg-om-cream/50 dark:bg-om-navy/30 border-l-4 border-om-gold">
+                                Karakteristik utama yang membedakan hikayat dari jenis teks sastra lainnya terletak pada latar istana atau istanacentris. Jalan cerita selalu berpusat pada kehidupan keluarga kerajaan lengkap dengan intrik perebutan kekuasaan dan peperangan sengit. Unsur kesaktian dan peristiwa di luar nalar manusia menjadi bumbu utama yang menghidupkan alur cerita hikayat. Karakter tokoh dalam hikayat dibuat sangat jelas pembagiannya antara sosok protagonis yang baik dan antagonis yang jahat. Penyampaian cerita dilakukan secara lisan turun-temurun dari satu generasi ke generasi berikutnya di lingkungan istana.
+                            </p>
+
+                            <!-- Paragraf 3 (5 Kalimat) -->
+                            <p class="p-4 rounded-xl bg-om-cream/50 dark:bg-om-navy/30 border-l-4 border-om-gold">
+                                Ciri kebahasaan teks hikayat sangat khas karena banyak menggunakan kata-kata arkais atau kata Melayu Kuno yang lampau. Kata-kata seperti syahdan hatta alkhisah dan sebermula sering ditemui pada awal kalimat penanda pergantian peristiwa. Struktur kalimat dalam hikayat cenderung menggunakan pola inverted atau kalimat terbalik yang memperkuat nuansa klasik sastra. Penggunaan majas hiperbola dan perumpamaan kuno sering dipakai untuk menggambarkan ketampanan atau kesaktian para tokoh cerita. Bahasa Melayu klasik ini memberikan nilai estetika tinggi sekaligus menjadi warisan kebudayaan bahasa Nusantara yang bernilai.
+                            </p>
+
+                            <!-- Paragraf 4 (5 Kalimat) -->
+                            <p class="p-4 rounded-xl bg-om-cream/50 dark:bg-om-navy/30 border-l-4 border-om-gold">
+                                Nilai-nilai kehidupan yang terkandung dalam teks hikayat sangat beragam mulai dari nilai moral agama hingga budaya. Pesan moral tentang kesetiaan kepahlawanan dan kepatuhan kepada Sang Pencipta selalu menjadi pesan inti hikayat. Mempelajari teks hikayat memberikan wawasan sejarah mengenai pandangan hidup dan kebudayaan nenek moyang bangsa Indonesia. Generasi muda dapat memetik pelajaran berharga dari keteladanan watak positif yang ditunjukkan oleh tokoh-tokoh utama. Kesimpulannya teks hikayat adalah warisan sastra klasik bernilai tinggi yang perlu terus dilestarikan oleh seluruh masyarakat.
+                            </p>
+                        </div>
+
+                        <!-- TAGS & BOTTOM CLOSE BUTTON -->
+                        <div class="mt-6 pt-6 border-t border-om-gold/20 flex flex-wrap items-center justify-between gap-4">
+                            <div class="flex flex-wrap gap-2">
+                                <span class="px-2.5 py-1 rounded bg-om-cream dark:bg-om-navy/50 text-[10px] font-bold text-om-gold uppercase tracking-wider border border-om-gold/30">#TeksHikayat</span>
+                                <span class="px-2.5 py-1 rounded bg-om-cream dark:bg-om-navy/50 text-[10px] font-bold text-om-gold uppercase tracking-wider border border-om-gold/30">#SastraMelayuKlasik</span>
+                                <span class="px-2.5 py-1 rounded bg-om-cream dark:bg-om-navy/50 text-[10px] font-bold text-om-gold uppercase tracking-wider border border-om-gold/30">#4Paragraf5Kalimat</span>
+                            </div>
+                            <button onclick="toggleMaterial('teks-hikayat')"
+                                class="px-4 py-2 text-xs font-semibold rounded-lg border border-om-gold/40 text-om-navy dark:text-om-gold hover:bg-om-gold hover:text-om-navy transition-all">
+                                <i class="fa-solid fa-chevron-up mr-1.5"></i> Tutup Artikel
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- MATERI 4: TEKS NEGOSIASI -->
+                <div id="material-card-teks-negosiasi" class="rounded-2xl bg-om-card-light dark:bg-om-card-dark border border-om-gold/30 shadow-xl overflow-hidden transition-all duration-300">
+                    <!-- TITLE BUTTON HEADER -->
+                    <button onclick="toggleMaterial('teks-negosiasi')" id="material-btn-teks-negosiasi"
+                        class="w-full p-6 sm:p-8 text-left bg-gradient-to-r from-om-cream via-om-card-light to-om-cream dark:from-om-navy dark:via-om-card-dark dark:to-om-navy border-b border-om-gold/20 flex items-center justify-between gap-4 hover:bg-om-gold/5 transition-colors focus:outline-none">
+                        <div class="flex items-center gap-4 sm:gap-6">
+                            <div class="w-12 h-12 sm:w-14 sm:h-14 rounded-xl bg-om-navy dark:bg-om-gold text-om-gold dark:text-om-navy flex items-center justify-center text-xl sm:text-2xl shrink-0 shadow-md">
+                                <i class="fa-solid fa-handshake"></i>
+                            </div>
+                            <div>
+                                <span class="px-2.5 py-0.5 rounded-full text-[10px] font-bold uppercase tracking-wider bg-om-gold/15 text-om-gold-dark dark:text-om-gold border border-om-gold/30">Materi 04</span>
+                                <h3 class="font-serif text-2xl sm:text-3xl font-bold text-om-navy dark:text-white mt-1">4. Teks Negosiasi</h3>
+                                <p class="text-xs sm:text-sm text-gray-600 dark:text-gray-400 mt-0.5">Komunikasi Diplomatis & Kesepakatan Bersama (4 Paragraf, 5 Kalimat per Paragraf)</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <span class="hidden sm:inline-block text-xs font-semibold text-om-gold">Tekan untuk buka</span>
+                            <div class="w-10 h-10 rounded-full border border-om-gold/40 flex items-center justify-center bg-om-cream dark:bg-om-navy text-om-navy dark:text-om-gold shadow-sm">
+                                <i id="material-icon-teks-negosiasi" class="fa-solid fa-chevron-down opacity-60 transition-transform duration-300"></i>
+                            </div>
+                        </div>
+                    </button>
+
+                    <!-- MATERIAL CONTENT (HIDDEN INITIALLY) -->
+                    <div id="material-content-teks-negosiasi" class="p-6 sm:p-10 hidden border-t border-om-gold/20">
+                        <!-- Gambar Artikel -->
+                        <div class="relative w-full h-[250px] sm:h-[320px] rounded-2xl overflow-hidden mb-8 shadow-md">
+                            <img src="teks_negosiasi.png" alt="Teks Negosiasi Diplomasi" class="w-full h-full object-cover">
+                            <div class="absolute inset-0 bg-black/35 pointer-events-none"></div>
+                            <div class="absolute bottom-4 left-4 bg-om-navy/80 backdrop-blur-md px-4 py-2 rounded-lg border border-om-gold/30 text-white text-xs font-mono">
+                                <i class="fa-solid fa-handshake text-om-gold mr-2"></i> Artikel Teks Negosiasi • 4 Paragraf (5 Kalimat / Paragraf)
+                            </div>
+                        </div>
+
+                        <!-- Informasi Tugas Metadata -->
+                        <div class="grid grid-cols-2 md:grid-cols-4 gap-4 p-4 rounded-xl bg-om-cream dark:bg-om-navy/40 border border-om-gold/20 mb-8 text-xs sm:text-sm">
+                            <div>
+                                <span class="text-gray-500 dark:text-gray-400 block mb-1">Status Tugas:</span>
+                                <span class="px-2.5 py-1 rounded bg-emerald-500/20 text-emerald-700 dark:text-emerald-400 font-semibold uppercase tracking-wider text-[10px]">Telah Dikumpulkan</span>
+                            </div>
+                            <div>
+                                <span class="text-gray-500 dark:text-gray-400 block mb-1">Mata Pelajaran:</span>
+                                <span class="font-bold text-om-navy dark:text-om-gold">Bahasa Indonesia</span>
+                            </div>
+                            <div>
+                                <span class="text-gray-500 dark:text-gray-400 block mb-1">Pengajar:</span>
+                                <span class="font-bold text-om-navy dark:text-om-gold">Guru Bahasa Indonesia</span>
+                            </div>
+                            <div>
+                                <span class="text-gray-500 dark:text-gray-400 block mb-1">Nilai Evaluasi:</span>
+                                <span class="font-bold text-emerald-600 dark:text-emerald-400">97 / 100</span>
+                            </div>
+                        </div>
+
+                        <!-- ISI ARTIKEL LENGKAP: 4 PARAGRAF (5 KALIMAT PER PARAGRAF) -->
+                        <div class="text-sm text-gray-700 dark:text-gray-300 space-y-6 text-justify leading-relaxed font-sans">
+                            <!-- Paragraf 1 (5 Kalimat) -->
+                            <p class="p-4 rounded-xl bg-om-cream/50 dark:bg-om-navy/30 border-l-4 border-om-gold">
+                                Teks negosiasi merupakan bentuk interaksi sosial yang bertujuan untuk mencapai kesepakatan bersama di antara pihak-pihak berkepentingan. Setiap pihak dalam negosiasi memiliki perbedaan pendapat atau perbedaan kepentingan yang harus diselaraskan secara jalan damai. Proses komunikasi ini terjadi pada berbagai ranah kehidupan mulai dari perdagangan bisnis hingga penyelesaian konflik publik. Keberhasilan negosiasi ditandai dengan tercapainya solusi saling menguntungkan atau dikenal dengan istilah win-win solution. Pembelajaran teks negosiasi sangat penting untuk melatih komunikasi interpersonal dan kemampuan diplomasi para siswa sekolah.
+                            </p>
+
+                            <!-- Paragraf 2 (5 Kalimat) -->
+                            <p class="p-4 rounded-xl bg-om-cream/50 dark:bg-om-navy/30 border-l-4 border-om-gold">
+                                Struktur pembangun teks negosiasi terdiri dari pengajuan penawaran persetujuan dan diakhiri dengan kesepakatan penutup bersama. Bagian orientasi diawali dengan salam pembuka serta pengenalan maksud pembicaraan awal antarpihak yang melakukan proses diskusi. Pengajuan merupakan tahap di mana salah satu pihak menyampaikan usulan atau permintaan barang dan jasa yang diinginkan. Penawaran adalah proses inti di mana kedua pihak saling menyampaikan tawar-menawar kompromi hingga menemukan titik temu. Persetujuan dan kesepakatan menjadi akhir negosiasi yang mengikat kedua pihak untuk menjalankan keputusan yang disetujui bersama.
+                            </p>
+
+                            <!-- Paragraf 3 (5 Kalimat) -->
+                            <p class="p-4 rounded-xl bg-om-cream/50 dark:bg-om-navy/30 border-l-4 border-om-gold">
+                                Ciri kebahasaan dalam teks negosiasi didominasi oleh penggunaan kalimat persuasif yang bertujuan untuk membujuk pihak lawan. Bahasa yang digunakan harus bersifat santun komunikatif serta tidak menyinggung perasaan mitra bicara dalam berdiskusi. Penggunaan kalimat deklaratif dan interogatif sering dipakai untuk menggali informasi serta menyampaikan argumen dengan rasional. Pilihan kata berpasangan tutur seperti mengusulkan dan menolak mewarnai dialog tawar-menawar dalam teks negosiasi tertulis. Keterampilan memilih sinonim dan kata-kata positif sangat membantu dalam meredam ketegangan selama proses penawaran berlangsung.
+                            </p>
+
+                            <!-- Paragraf 4 (5 Kalimat) -->
+                            <p class="p-4 rounded-xl bg-om-cream/50 dark:bg-om-navy/30 border-l-4 border-om-gold">
+                                Dalam kehidupan sehari-hari negosiasi dapat kita temukan pada aktivitas jual beli pasar tradisional maupun rapat organisasi. Seorang negotiator yang baik harus memiliki sikap sabar mampu mendengarkan pendapat lawan serta pandai mencari solusi alternatif. Menghindari sikap egois dan memaksakan kehendak menjadi kunci utama agar proses negosiasi tidak berakhir dengan kebuntuan. Mempelajari teks negosiasi membentuk karakter siswa menjadi pribadi yang kooperatif diplomatis dan pandai berkomunikasi efektif. Kesimpulannya teks negosiasi adalah seni berkomunikasi untuk menciptakan kesepakatan harmonis dalam menghadapi perbedaan kepentingan manusia.
+                            </p>
+                        </div>
+
+                        <!-- TAGS & BOTTOM CLOSE BUTTON -->
+                        <div class="mt-6 pt-6 border-t border-om-gold/20 flex flex-wrap items-center justify-between gap-4">
+                            <div class="flex flex-wrap gap-2">
+                                <span class="px-2.5 py-1 rounded bg-om-cream dark:bg-om-navy/50 text-[10px] font-bold text-om-gold uppercase tracking-wider border border-om-gold/30">#TeksNegosiasi</span>
+                                <span class="px-2.5 py-1 rounded bg-om-cream dark:bg-om-navy/50 text-[10px] font-bold text-om-gold uppercase tracking-wider border border-om-gold/30">#DiplomasiKomunikasi</span>
+                                <span class="px-2.5 py-1 rounded bg-om-cream dark:bg-om-navy/50 text-[10px] font-bold text-om-gold uppercase tracking-wider border border-om-gold/30">#4Paragraf5Kalimat</span>
+                            </div>
+                            <button onclick="toggleMaterial('teks-negosiasi')"
+                                class="px-4 py-2 text-xs font-semibold rounded-lg border border-om-gold/40 text-om-navy dark:text-om-gold hover:bg-om-gold hover:text-om-navy transition-all">
+                                <i class="fa-solid fa-chevron-up mr-1.5"></i> Tutup Artikel
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- MATERI 5: TEKS BIOGRAFI -->
+                <div id="material-card-teks-biografi" class="rounded-2xl bg-om-card-light dark:bg-om-card-dark border border-om-gold/30 shadow-xl overflow-hidden transition-all duration-300">
+                    <!-- TITLE BUTTON HEADER -->
+                    <button onclick="toggleMaterial('teks-biografi')" id="material-btn-teks-biografi"
+                        class="w-full p-6 sm:p-8 text-left bg-gradient-to-r from-om-cream via-om-card-light to-om-cream dark:from-om-navy dark:via-om-card-dark dark:to-om-navy border-b border-om-gold/20 flex items-center justify-between gap-4 hover:bg-om-gold/5 transition-colors focus:outline-none">
+                        <div class="flex items-center gap-4 sm:gap-6">
+                            <div class="w-12 h-12 sm:w-14 sm:h-14 rounded-xl bg-om-navy dark:bg-om-gold text-om-gold dark:text-om-navy flex items-center justify-center text-xl sm:text-2xl shrink-0 shadow-md">
+                                <i class="fa-solid fa-book-open-reader"></i>
+                            </div>
+                            <div>
+                                <span class="px-2.5 py-0.5 rounded-full text-[10px] font-bold uppercase tracking-wider bg-om-gold/15 text-om-gold-dark dark:text-om-gold border border-om-gold/30">Materi 05</span>
+                                <h3 class="font-serif text-2xl sm:text-3xl font-bold text-om-navy dark:text-white mt-1">5. Teks Biografi</h3>
+                                <p class="text-xs sm:text-sm text-gray-600 dark:text-gray-400 mt-0.5">Kisah Perjuangan Tokoh Inspiratif (4 Paragraf, 5 Kalimat per Paragraf)</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <span class="hidden sm:inline-block text-xs font-semibold text-om-gold">Tekan untuk buka</span>
+                            <div class="w-10 h-10 rounded-full border border-om-gold/40 flex items-center justify-center bg-om-cream dark:bg-om-navy text-om-navy dark:text-om-gold shadow-sm">
+                                <i id="material-icon-teks-biografi" class="fa-solid fa-chevron-down opacity-60 transition-transform duration-300"></i>
+                            </div>
+                        </div>
+                    </button>
+
+                    <!-- MATERIAL CONTENT (HIDDEN INITIALLY) -->
+                    <div id="material-content-teks-biografi" class="p-6 sm:p-10 hidden border-t border-om-gold/20">
+                        <!-- Gambar Artikel -->
+                        <div class="relative w-full h-[250px] sm:h-[320px] rounded-2xl overflow-hidden mb-8 shadow-md">
+                            <img src="teks_biografi.png" alt="Teks Biografi Tokoh" class="w-full h-full object-cover">
+                            <div class="absolute inset-0 bg-black/35 pointer-events-none"></div>
+                            <div class="absolute bottom-4 left-4 bg-om-navy/80 backdrop-blur-md px-4 py-2 rounded-lg border border-om-gold/30 text-white text-xs font-mono">
+                                <i class="fa-solid fa-book-open-reader text-om-gold mr-2"></i> Artikel Teks Biografi • 4 Paragraf (5 Kalimat / Paragraf)
+                            </div>
+                        </div>
+
+                        <!-- Informasi Tugas Metadata -->
+                        <div class="grid grid-cols-2 md:grid-cols-4 gap-4 p-4 rounded-xl bg-om-cream dark:bg-om-navy/40 border border-om-gold/20 mb-8 text-xs sm:text-sm">
+                            <div>
+                                <span class="text-gray-500 dark:text-gray-400 block mb-1">Status Tugas:</span>
+                                <span class="px-2.5 py-1 rounded bg-emerald-500/20 text-emerald-700 dark:text-emerald-400 font-semibold uppercase tracking-wider text-[10px]">Telah Dikumpulkan</span>
+                            </div>
+                            <div>
+                                <span class="text-gray-500 dark:text-gray-400 block mb-1">Mata Pelajaran:</span>
+                                <span class="font-bold text-om-navy dark:text-om-gold">Bahasa Indonesia</span>
+                            </div>
+                            <div>
+                                <span class="text-gray-500 dark:text-gray-400 block mb-1">Pengajar:</span>
+                                <span class="font-bold text-om-navy dark:text-om-gold">Guru Bahasa Indonesia</span>
+                            </div>
+                            <div>
+                                <span class="text-gray-500 dark:text-gray-400 block mb-1">Nilai Evaluasi:</span>
+                                <span class="font-bold text-emerald-600 dark:text-emerald-400">96 / 100</span>
+                            </div>
+                        </div>
+
+                        <!-- ISI ARTIKEL LENGKAP: 4 PARAGRAF (5 KALIMAT PER PARAGRAF) -->
+                        <div class="text-sm text-gray-700 dark:text-gray-300 space-y-6 text-justify leading-relaxed font-sans">
+                            <!-- Paragraf 1 (5 Kalimat) -->
+                            <p class="p-4 rounded-xl bg-om-cream/50 dark:bg-om-navy/30 border-l-4 border-om-gold">
+                                Teks biografi merupakan narasi karangan yang mengisahkan riwayat perjalanan hidup seorang tokoh penting atau pahlawan inspiratif. Tulisan ini dibuat oleh orang lain dengan mengumpulkan data fakta peristiwa sejarah serta rekaman jejak tokoh tersebut. Fokus utama teks biografi adalah menyajikan keistimewaan keteladanan serta perjuangan tokoh dalam mencapai kesuksesan hidupnya. Melalui biografi pembaca dapat mempelajari latar belakang keluarga pendidikan tantangan hingga karya berharga sang tokoh. Membaca kisah hidup tokoh terkenal dapat memberikan motivasi dan dorongan semangat bagi pembaca untuk meraih cita-cita.
+                            </p>
+
+                            <!-- Paragraf 2 (5 Kalimat) -->
+                            <p class="p-4 rounded-xl bg-om-cream/50 dark:bg-om-navy/30 border-l-4 border-om-gold">
+                                Struktur penyusunan teks biografi dibangun secara teratur melalui tiga bagian utama yaitu orientasi peristiwa dan reorientasi. Orientasi berisi pengenalan awal mengenai nama tempat tanggal lahir latar belakang keluarga serta gambaran umum tokoh. Bagian peristiwa penting menguraikan secara kronologis berbagai rintangan masalah perjuangan dan pencapaian prestasi sang tokoh. Reorientasi merupakan bagian penutup yang berisi pandangan penulis serta simpulan atas kontribusi karya tokoh bagi bangsa. Penyusunan alur cerita yang runtut berdasarkan urutan waktu sangat penting agar pembaca dapat memahami perjalanan hidup tokoh.
+                            </p>
+
+                            <!-- Paragraf 3 (5 Kalimat) -->
+                            <p class="p-4 rounded-xl bg-om-cream/50 dark:bg-om-navy/30 border-l-4 border-om-gold">
+                                Kaidah kebahasaan teks biografi ditandai dengan penggunaan kata ganti orang ketiga tunggal seperti ia dia atau beliau. Penggunaan kata kerja tindakan seperti berjuang mendirikan memimpin dan menulis dominan dipakai untuk menjelaskan aktivitas tokoh. Kata sifat banyak disisipkan untuk menggambarkan keunggulan watak tokoh seperti pantang menyerah bijaksana ulet dan dermawan. Penulis biografi juga menggunakan kata sambung penanda urutan waktu untuk menghubungkan rangkaian peristiwa hidup secara logis. Penggunaan kalimat pasif kerap dipakai untuk menjelaskan peristiwa sejarah atau penghargaan yang diterima oleh tokoh tersebut.
+                            </p>
+
+                            <!-- Paragraf 4 (5 Kalimat) -->
+                            <p class="p-4 rounded-xl bg-om-cream/50 dark:bg-om-navy/30 border-l-4 border-om-gold">
+                                Manfaat utama mempelajari teks biografi adalah mengambil hikmah dari pengalaman dan perjuangan hidup para pahlawan nasional. Pembaca dapat meneladani sikap kegigihan moralitas tinggi serta pengorbanan para tokoh dalam menghadapi ujian kehidupan. Penulisan biografi juga berfungsi sebagai dokumen sejarah yang merekam jejak sumbangsih tokoh bagi perkembangan zaman. Tugas membuat teks biografi melatih siswa melakukan riset wawancara serta menyusun narasi fakta secara sistematis. Kesimpulannya teks biografi adalah jendela peneladanan hidup yang menginspirasi pembaca untuk berkarya positif bagi masyarakat.
+                            </p>
+                        </div>
+
+                        <!-- TAGS & BOTTOM CLOSE BUTTON -->
+                        <div class="mt-6 pt-6 border-t border-om-gold/20 flex flex-wrap items-center justify-between gap-4">
+                            <div class="flex flex-wrap gap-2">
+                                <span class="px-2.5 py-1 rounded bg-om-cream dark:bg-om-navy/50 text-[10px] font-bold text-om-gold uppercase tracking-wider border border-om-gold/30">#TeksBiografi</span>
+                                <span class="px-2.5 py-1 rounded bg-om-cream dark:bg-om-navy/50 text-[10px] font-bold text-om-gold uppercase tracking-wider border border-om-gold/30">#KisahInspiratifTokoh</span>
+                                <span class="px-2.5 py-1 rounded bg-om-cream dark:bg-om-navy/50 text-[10px] font-bold text-om-gold uppercase tracking-wider border border-om-gold/30">#4Paragraf5Kalimat</span>
+                            </div>
+                            <button onclick="toggleMaterial('teks-biografi')"
+                                class="px-4 py-2 text-xs font-semibold rounded-lg border border-om-gold/40 text-om-navy dark:text-om-gold hover:bg-om-gold hover:text-om-navy transition-all">
+                                <i class="fa-solid fa-chevron-up mr-1.5"></i> Tutup Artikel
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- MATERI 6: MUSIKALISASI PUISI -->
+                <div id="material-card-musikalisasi-puisi" class="rounded-2xl bg-om-card-light dark:bg-om-card-dark border border-om-gold/30 shadow-xl overflow-hidden transition-all duration-300">
+                    <!-- TITLE BUTTON HEADER -->
+                    <button onclick="toggleMaterial('musikalisasi-puisi')" id="material-btn-musikalisasi-puisi"
+                        class="w-full p-6 sm:p-8 text-left bg-gradient-to-r from-om-cream via-om-card-light to-om-cream dark:from-om-navy dark:via-om-card-dark dark:to-om-navy border-b border-om-gold/20 flex items-center justify-between gap-4 hover:bg-om-gold/5 transition-colors focus:outline-none">
+                        <div class="flex items-center gap-4 sm:gap-6">
+                            <div class="w-12 h-12 sm:w-14 sm:h-14 rounded-xl bg-om-navy dark:bg-om-gold text-om-gold dark:text-om-navy flex items-center justify-center text-xl sm:text-2xl shrink-0 shadow-md">
+                                <i class="fa-solid fa-music"></i>
+                            </div>
+                            <div>
+                                <span class="px-2.5 py-0.5 rounded-full text-[10px] font-bold uppercase tracking-wider bg-om-gold/15 text-om-gold-dark dark:text-om-gold border border-om-gold/30">Materi 06</span>
+                                <h3 class="font-serif text-2xl sm:text-3xl font-bold text-om-navy dark:text-white mt-1">6. Musikalisasi Puisi</h3>
+                                <p class="text-xs sm:text-sm text-gray-600 dark:text-gray-400 mt-0.5">Harmonisasi Sastra & Alunan Musik Pertunjukan (4 Paragraf, 5 Kalimat per Paragraf)</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <span class="hidden sm:inline-block text-xs font-semibold text-om-gold">Tekan untuk buka</span>
+                            <div class="w-10 h-10 rounded-full border border-om-gold/40 flex items-center justify-center bg-om-cream dark:bg-om-navy text-om-navy dark:text-om-gold shadow-sm">
+                                <i id="material-icon-musikalisasi-puisi" class="fa-solid fa-chevron-down opacity-60 transition-transform duration-300"></i>
+                            </div>
+                        </div>
+                    </button>
+
+                    <!-- MATERIAL CONTENT (HIDDEN INITIALLY) -->
+                    <div id="material-content-musikalisasi-puisi" class="p-6 sm:p-10 hidden border-t border-om-gold/20">
+                        <!-- Gambar Artikel -->
+                        <div class="relative w-full h-[250px] sm:h-[320px] rounded-2xl overflow-hidden mb-8 shadow-md">
+                            <img src="musikalisasi_puisi.png" alt="Musikalisasi Puisi Seni Sastra" class="w-full h-full object-cover">
+                            <div class="absolute inset-0 bg-black/35 pointer-events-none"></div>
+                            <div class="absolute bottom-4 left-4 bg-om-navy/80 backdrop-blur-md px-4 py-2 rounded-lg border border-om-gold/30 text-white text-xs font-mono">
+                                <i class="fa-solid fa-music text-om-gold mr-2"></i> Artikel Musikalisasi Puisi • 4 Paragraf (5 Kalimat / Paragraf)
+                            </div>
+                        </div>
+
+                        <!-- Informasi Tugas Metadata -->
+                        <div class="grid grid-cols-2 md:grid-cols-4 gap-4 p-4 rounded-xl bg-om-cream dark:bg-om-navy/40 border border-om-gold/20 mb-8 text-xs sm:text-sm">
+                            <div>
+                                <span class="text-gray-500 dark:text-gray-400 block mb-1">Status Tugas:</span>
+                                <span class="px-2.5 py-1 rounded bg-emerald-500/20 text-emerald-700 dark:text-emerald-400 font-semibold uppercase tracking-wider text-[10px]">Telah Dikumpulkan</span>
+                            </div>
+                            <div>
+                                <span class="text-gray-500 dark:text-gray-400 block mb-1">Mata Pelajaran:</span>
+                                <span class="font-bold text-om-navy dark:text-om-gold">Bahasa Indonesia</span>
+                            </div>
+                            <div>
+                                <span class="text-gray-500 dark:text-gray-400 block mb-1">Pengajar:</span>
+                                <span class="font-bold text-om-navy dark:text-om-gold">Guru Bahasa Indonesia</span>
+                            </div>
+                            <div>
+                                <span class="text-gray-500 dark:text-gray-400 block mb-1">Nilai Evaluasi:</span>
+                                <span class="font-bold text-emerald-600 dark:text-emerald-400">99 / 100</span>
+                            </div>
+                        </div>
+
+                        <!-- ISI ARTIKEL LENGKAP: 4 PARAGRAF (5 KALIMAT PER PARAGRAF) -->
+                        <div class="text-sm text-gray-700 dark:text-gray-300 space-y-6 text-justify leading-relaxed font-sans">
+                            <!-- Paragraf 1 (5 Kalimat) -->
+                            <p class="p-4 rounded-xl bg-om-cream/50 dark:bg-om-navy/30 border-l-4 border-om-gold">
+                                Musikalisasi puisi merupakan kegiatan mengubah karya puisi menjadi sebuah lagu dengan menyelaraskan irama nada dan bait puisi. Alunan musik ciptaan berfungsi sebagai sarana untuk memperkuat ekspresi emosi serta makna tersirat yang terkandung dalam bait. Dalam proses musikalisasi teks puisi tidak boleh diubah secara drastis agar keaslian estetika karya penyair tetap terjaga. Kolaborasi antara keindahan seni sastra dan harmonisasi lagu menciptakan bentuk pertunjukan karya seni yang sangat memukau. Kegiatan kreatif ini menjadi salah satu materi favorit siswa dalam mengeksplorasi kecintaan terhadap karya puisi Indonesia.
+                            </p>
+
+                            <!-- Paragraf 2 (5 Kalimat) -->
+                            <p class="p-4 rounded-xl bg-om-cream/50 dark:bg-om-navy/30 border-l-4 border-om-gold">
+                                Terdapat beberapa bentuk pendekatan dalam menyajikan pertunjukan musikalisasi puisi di atas panggung seni sekolah. Bentuk pertama adalah musikalisasi puisi terikat di mana melodi lagu sepenuhnya menyesuaikan irama pembacaan bait puisi dasar. Bentuk kedua dinamakan musikalisasi puisi bebas di mana pengubah lagu memiliki kebebasan komposisi instrumen musik yang luas. Bentuk ketiga adalah musikalisasi campuran yang memadukan antara pembacaan deklamasi puisi lisan dengan nyanyian lagu berinstrumen. Pemilihan bentuk penyajian harus memperhatikan karakter tema puisi apakah bernuansa sedih gembira atau perjuangan heroik.
+                            </p>
+
+                            <!-- Paragraf 3 (5 Kalimat) -->
+                            <p class="p-4 rounded-xl bg-om-cream/50 dark:bg-om-navy/30 border-l-4 border-om-gold">
+                                Langkah awal membuat musikalisasi puisi dimulai dengan memahami isi emosi tema serta diksi puisi secara mendalam. Apresiatator kemudian menentukan tangga nada dan tempo musik yang paling sesuai untuk mengiringi suasana batin penyair. Alat musik pengiring seperti gitar akustik biola atau piano sering digunakan untuk mengiringi alunan vokal penyanyi. Latihan harmonisasi antara tempo pembacaan bait dan nada intrumen musik sangat penting agar pertunjukan terdengar selaras. Penghayatan vokalis dalam menyanyikan lirik puisi akan menyampaikan pesan moral bait puisi secara langsung ke hati pendengar.
+                            </p>
+
+                            <!-- Paragraf 4 (5 Kalimat) -->
+                            <p class="p-4 rounded-xl bg-om-cream/50 dark:bg-om-navy/30 border-l-4 border-om-gold">
+                                Manfaat positif dari kegiatan musikalisasi puisi adalah mengasah kepekaan estetika rasa dan daya imajinasi seni siswa. Melalui musikalisasi karya puisi kuno maupun modern menjadi terasa lebih hidup komunikatif serta mudah dinikmati publik. Pertunjukan seni ini juga melatih keberanian tampil di depan umum serta kerja sama tim dalam memadukan vokal dan instrumen. Apresiasi masyarakat terhadap karya sastra Indonesia meningkat pesat seiring tingginya kreativitas pertunjukan musikalisasi puisi. Kesimpulannya musikalisasi puisi adalah perpaduan indah antara sastra dan musik yang mengabadikan makna isi bait puisi secara abadi.
+                            </p>
+                        </div>
+
+                        <!-- TAGS & BOTTOM CLOSE BUTTON -->
+                        <div class="mt-6 pt-6 border-t border-om-gold/20 flex flex-wrap items-center justify-between gap-4">
+                            <div class="flex flex-wrap gap-2">
+                                <span class="px-2.5 py-1 rounded bg-om-cream dark:bg-om-navy/50 text-[10px] font-bold text-om-gold uppercase tracking-wider border border-om-gold/30">#MusikalisasiPuisi</span>
+                                <span class="px-2.5 py-1 rounded bg-om-cream dark:bg-om-navy/50 text-[10px] font-bold text-om-gold uppercase tracking-wider border border-om-gold/30">#HarmoniSastraMusik</span>
+                                <span class="px-2.5 py-1 rounded bg-om-cream dark:bg-om-navy/50 text-[10px] font-bold text-om-gold uppercase tracking-wider border border-om-gold/30">#4Paragraf5Kalimat</span>
+                            </div>
+                            <button onclick="toggleMaterial('musikalisasi-puisi')"
+                                class="px-4 py-2 text-xs font-semibold rounded-lg border border-om-gold/40 text-om-navy dark:text-om-gold hover:bg-om-gold hover:text-om-navy transition-all">
+                                <i class="fa-solid fa-chevron-up mr-1.5"></i> Tutup Artikel
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER WITH OLD MONEY ELEGANCE -->
+    <footer class="border-t border-om-gold/20 bg-om-cream-dark/30 dark:bg-om-navy-dark mt-16 py-8">
+        <div class="max-w-7xl mx-auto px-4 text-center">
+            <div
+                class="w-8 h-8 rounded-full border border-om-gold mx-auto mb-3 flex items-center justify-center bg-om-navy text-om-gold font-serif font-bold text-sm">
+                A
+            </div>
+            <p class="font-serif text-lg font-bold text-om-navy dark:text-om-gold">Ardi Aprianto (Ardi.a)</p>
+            <p class="text-xs text-gray-500 dark:text-gray-400 mt-1">Digital Portfolio & School Archive • Kelas 11 SMA
+            </p>
+            <p class="text-[11px] text-gray-400 dark:text-gray-500 mt-4 font-light">Designed with Old Money Aesthetics &
+                Tailwind CSS. Ready for Hosting.</p>
+        </div>
+    </footer>
+
+    <!-- JAVASCRIPT LOGIC -->
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>
